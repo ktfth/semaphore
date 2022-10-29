@@ -1,0 +1,23 @@
+[package]
+name = "client"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "client"
+path = "src/main.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ipc-rpc = "1.2.6"
+futures = "0.3"
+ipc-channel = "0.16.0"
+log = "0.4"
+schemars = "0.8.11"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0.85", optional = true }
+tokio = { version = "1.7", features = ["sync", "rt-multi-thread", "time", "macros", "process"] }
+uuid = { version = "1.1.2", features = ["serde", "v4"] }
+env_logger = "0.8"
+test-log = "0.2.11"
